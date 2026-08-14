@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 2,
+  "converterVersion": "1.0.1",
+  "dataVersion": "662f71ed90a6d11af7ea",
+  "generatedAt": "2026-08-14T15:31:10+00:00",
+  "source": {
+    "filename": "clues.xlsx",
+    "sha256": "4f36c7bb5a090053bd74b962ddf84e55e49efb607b8f70d760d24daeda767e0d",
+    "worksheet": "round 1",
+    "rowCount": 120565,
+    "roundCounts": {
+      "1": 59623,
+      "2": 58739,
+      "final": 2203
+    },
+    "valueCounts": {
+      "1": {
+        "200": 11913,
+        "400": 11925,
+        "600": 11929,
+        "800": 11936,
+        "1000": 11920
+      },
+      "2": {
+        "400": 11725,
+        "800": 11762,
+        "1200": 11768,
+        "1600": 11772,
+        "2000": 11712
+      },
+      "final": {
+        "3000": 2203
+      }
+    }
+  },
+  "filters": {
+    "mediaPolicy": "exclude-high-confidence",
+    "mediaPatternNames": [
+      "monitor_visual",
+      "starts_with_here_is_or_are",
+      "shown_here",
+      "photo_or_image_reference",
+      "map_or_diagram_prompt",
+      "audio_prompt",
+      "bracketed_audio",
+      "video_prompt",
+      "explicit_visual_object"
+    ],
+    "manualOverrideCount": 4
+  },
+  "rounds": {
+    "1": {
+      "kind": "category-shards",
+      "expectedValues": [
+        200,
+        400,
+        600,
+        800,
+        1000
+      ],
+      "categoryCount": 11547,
+      "clueCount": 57735,
+      "recordCount": 11547,
+      "shardSize": 400,
+      "shardCount": 29,
+      "bytes": 10523026,
+      "shards": [
+        {
+          "path": "round1/r1-000.json",
+          "count": 400,
+          "bytes": 366576,
+          "sha256": "9575f4bce2b77a1e35bf7e663cea32c3bb03889bc7357a97e73859d54b3a5208"
+        },
+        {
+          "path": "round1/r1-001.json",
+          "count": 400,
+          "bytes": 364339,
+          "sha256": "d0f5a207edd5040bf2f168c2ec6c89b2a9f2b72134d795de356cb6014d66a719"
+        },
+        {
+          "path": "round1/r1-002.json",
+          "count": 400,
+          "bytes": 365177,
+          "sha256": "ad47a40da27917a79a84fc45277af4355a2ffe055b1600fb983f5dc3ffedc426"
+        },
+        {
+          "path": "round1/r1-003.json",
+          "count": 400,
+          "bytes": 361226,
+          "sha256": "47f8fef15a17d60a14840bce912a812f7a3aa8cbdebad8d9449e3c5ea5a39deb"
+        },
+        {
+          "path": "round1/r1-004.json",
+          "count": 400,
+          "bytes": 368870,
+          "sha256": "ef75b84c215af05174a4fc0bffbf8c8aef0fd3dcde1979f7e373dda4f519f0a2"
+        },
+        {
+          "path": "round1/r1-005.json",
+          "count": 400,
+          "bytes": 367191,
+          "sha256": "0cbcbcff80c86c23094b33766e661d3639f0201b00188808e04b58b021828002"
+        },
+        {
+          "path": "round1/r1-006.json",
+          "count": 400,
+          "bytes": 361763,
+          "sha256": "0ea0843c699a345901679c8ff970e08bee5c36f175af9de8f1bbebc79a9d18a1"
+        },
+        {
+          "path": "round1/r1-007.json",
+          "count": 400,
+          "bytes": 363684,
+          "sha256": "4c393834c2840d8d3d1a0b0fc2712a8e6f764baa99238f94882071f70264ca04"
+        },
+        {
+          "path": "round1/r1-008.json",
+          "count": 400,
+          "bytes": 366928,
+          "sha256": "57579f80b54cc10629b626db6ec5737ec52b627bfaf2601f1b5585b9d2c84515"
+        },
+        {
+          "path": "round1/r1-009.json",
+          "count": 400,
+          "bytes": 356468,
+          "sha256": "913158723df6a64eb80a8e96c2b1f5bc5495bf4ef476871d0f3e0a6390d93a71"
+        },
+        {
+          "path": "round1/r1-010.json",
+          "count": 400,
+          "bytes": 364719,
+          "sha256": "4a42e358bc25dbc4aa5fb1bb01a737c1c70432dcb1e486953f701325a994f5f4"
+        },
+        {
+          "path": "round1/r1-011.json",
+          "count": 400,
+          "bytes": 366306,
+          "sha256": "f254dee7d617384f226b0ccf59cf2f62642738650812a55c814b44541adfb337"
+        },
+        {
+          "path": "round1/r1-012.json",
+          "count": 400,
+          "bytes": 367059,
+          "sha256": "1f837363068555b64dd916e027150db9bfec8cf74bdb476b14332c355f249fb5"
+        },
+        {
+          "path": "round1/r1-013.json",
+          "count": 400,
+          "bytes": 363180,
+          "sha256": "44b3b2a0b22e66161cb9d477cff5e4881b2c9a7ee14261481e92f3ea941b767e"
+        },
+        {
+          "path": "round1/r1-014.json",
+          "count": 400,
+          "bytes": 364388,
+          "sha256": "35efc987fa708502babffd6b759fb1d6395bcc41b0597f6d27db307b5dd8379d"
+        },
+        {
+          "path": "round1/r1-015.json",
+          "count": 400,
+          "bytes": 367401,
+          "sha256": "d376f8f992c6aff74ed506d757b3131e53c4e35af828b4d90fbbe25bb611270c"
+        },
+        {
+          "path": "round1/r1-016.json",
+          "count": 400,
+          "bytes": 362424,
+          "sha256": "837528c97e942595e6ac7746393b21857dbc8eca67fa9eda1821ac977da286d5"
+        },
+        {
+          "path": "round1/r1-017.json",
+          "count": 400,
+          "bytes": 363571,
+          "sha256": "934f3db8f0994a2e978f930c7caa8b384c0f2c1e0a729f894c80b1d2c742978c"
+        },
+        {
+          "path": "round1/r1-018.json",
+          "count": 400,
+          "bytes": 366287,
+          "sha256": "2b42bce4f66daf10ea1843085bea36b4c3c8bda6c44fb3cfe5a303fa732cc42c"
+        },
+        {
+          "path": "round1/r1-019.json",
+          "count": 400,
+          "bytes": 367120,
+          "sha256": "ae9d7d0b46b84ed1395f9adab71fcde0652f7fde0e204381bc67b644181b4876"
+        },
+        {
+          "path": "round1/r1-020.json",
+          "count": 400,
+          "bytes": 366666,
+          "sha256": "0ebaa6ec4fac62999d5dd155fb3d7ba11a599853509a2f9e635936d799c8759e"
+        },
+        {
+          "path": "round1/r1-021.json",
+          "count": 400,
+          "bytes": 363829,
+          "sha256": "f220709975e71d10b175fff5012d588249ac60227a3478ef75660b7adb6811a5"
+        },
+        {
+          "path": "round1/r1-022.json",
+          "count": 400,
+          "bytes": 364055,
+          "sha256": "d189ee53f8d23c9c1de8e5ebc451bf31b04a7fb30f9ecb9895c0b590946a64e4"
+        },
+        {
+          "path": "round1/r1-023.json",
+          "count": 400,
+          "bytes": 364693,
+          "sha256": "be9c846c69cd56ff43918114ef22b4a1a4d1e8902b551e569ee76279548bcb7b"
+        },
+        {
+          "path": "round1/r1-024.json",
+          "count": 400,
+          "bytes": 362750,
+          "sha256": "f07b2612857287cc4b2944fb0409a0fd9095d9fdb637c197aea0a0bc224f1bb0"
+        },
+        {
+          "path": "round1/r1-025.json",
+          "count": 400,
+          "bytes": 362325,
+          "sha256": "6f56b47ff0541cc3479b11fe011eb8de5e26acfb98aa1ccdf40dc4b6992cefeb"
+        },
+        {
+          "path": "round1/r1-026.json",
+          "count": 400,
+          "bytes": 363707,
+          "sha256": "0d0ee35538517f0a975fea4254425096584a113314c7719f15f705ff8f1e485c"
+        },
+        {
+          "path": "round1/r1-027.json",
+          "count": 400,
+          "bytes": 359817,
+          "sha256": "d3925ec863af1e473966dac1c0c48a1d55b4a45a782013bb8e439241ed9c3eda"
+        },
+        {
+          "path": "round1/r1-028.json",
+          "count": 347,
+          "bytes": 320507,
+          "sha256": "f624d74a7d9adfdbc46941e5905f1daf484eff486cc59e166b20baaaf9876de6"
+        }
+      ]
+    },
+    "2": {
+      "kind": "category-shards",
+      "expectedValues": [
+        400,
+        800,
+        1200,
+        1600,
+        2000
+      ],
+      "categoryCount": 11172,
+      "clueCount": 55860,
+      "recordCount": 11172,
+      "shardSize": 400,
+      "shardCount": 28,
+      "bytes": 10376866,
+      "shards": [
+        {
+          "path": "round2/r2-000.json",
+          "count": 400,
+          "bytes": 369513,
+          "sha256": "7ef550a20284860ac207ff84bbb1c489eba4c9878265ebaa2a3c1e2b87eb0321"
+        },
+        {
+          "path": "round2/r2-001.json",
+          "count": 400,
+          "bytes": 368367,
+          "sha256": "e67b5480f757db3e9693e9b86165379e6d9e9678517611800d0bbddd67804ad9"
+        },
+        {
+          "path": "round2/r2-002.json",
+          "count": 400,
+          "bytes": 372582,
+          "sha256": "87f49639da159bb47751e3f82cd9655eef4dbe6d9c2a19a88bf66427284c48a7"
+        },
+        {
+          "path": "round2/r2-003.json",
+          "count": 400,
+          "bytes": 371931,
+          "sha256": "6a10e0a88816f88b56d7afc7d4067bfd7ca5eb48874d3bd991822565a1a1116a"
+        },
+        {
+          "path": "round2/r2-004.json",
+          "count": 400,
+          "bytes": 373110,
+          "sha256": "cc5e617300efe3dcf06e4d181f2ac77e78e8b9bba45bb510114c5692be709d5d"
+        },
+        {
+          "path": "round2/r2-005.json",
+          "count": 400,
+          "bytes": 373733,
+          "sha256": "4dda723eef2a3f96212b3582b06fdca38c73e45fdab427184bd207c3cc03b351"
+        },
+        {
+          "path": "round2/r2-006.json",
+          "count": 400,
+          "bytes": 369181,
+          "sha256": "fa960b5adb21b3e50c56e83bb3783ca5b38a5866e27c4d75e6c9271ad89904af"
+        },
+        {
+          "path": "round2/r2-007.json",
+          "count": 400,
+          "bytes": 374558,
+          "sha256": "ae713d14f32ecdf29d7885554862c3f60a3107a6cc48a163fa0ee940a705c410"
+        },
+        {
+          "path": "round2/r2-008.json",
+          "count": 400,
+          "bytes": 369725,
+          "sha256": "8e8ea3da9ff69fccd920217ba42fcf459cf5382b671160a7556b1798b574dec2"
+        },
+        {
+          "path": "round2/r2-009.json",
+          "count": 400,
+          "bytes": 371351,
+          "sha256": "a7b027ec4d71b0cc3e913b5c35efda02caf0b54b036ba06b2c616aea282b521f"
+        },
+        {
+          "path": "round2/r2-010.json",
+          "count": 400,
+          "bytes": 371213,
+          "sha256": "58bf53037bc11ebdead8967471af95a3caa017add5c6a702213a0697408d230f"
+        },
+        {
+          "path": "round2/r2-011.json",
+          "count": 400,
+          "bytes": 372101,
+          "sha256": "c8fc8468112a6da42cf98d1eeba7cb7dcda9da689a93b56433b4ec869b127a33"
+        },
+        {
+          "path": "round2/r2-012.json",
+          "count": 400,
+          "bytes": 372575,
+          "sha256": "88ab120c2fb86c4372c53c602d643d94522afb0ac1ab6ce9db36a390264def24"
+        },
+        {
+          "path": "round2/r2-013.json",
+          "count": 400,
+          "bytes": 370743,
+          "sha256": "2d531c9528d48c52691c001a5e1a5ca9791895f3394d09babdcdcf13f1a1956b"
+        },
+        {
+          "path": "round2/r2-014.json",
+          "count": 400,
+          "bytes": 372320,
+          "sha256": "00c4fc6a1f5c8856f6519a78b1d39b627e08d29326c341e14953287c6504d1d9"
+        },
+        {
+          "path": "round2/r2-015.json",
+          "count": 400,
+          "bytes": 370572,
+          "sha256": "4948a40bc500150a41af8cb9061b6973f4c149b4ac5b176d26be09d89113c969"
+        },
+        {
+          "path": "round2/r2-016.json",
+          "count": 400,
+          "bytes": 372435,
+          "sha256": "953f4ac8f262bc6fa768df14c362c31d6f7aeb64a3550286e85306dd08229487"
+        },
+        {
+          "path": "round2/r2-017.json",
+          "count": 400,
+          "bytes": 371585,
+          "sha256": "3072287755efaf2a0f28c0d15d3b9551d3087a176fbf92ea06e24df13eae49af"
+        },
+        {
+          "path": "round2/r2-018.json",
+          "count": 400,
+          "bytes": 369471,
+          "sha256": "d42578ad11c47dc3144f848348e481fd599e7d3101e8cf5bf3f1bc7bb30c33e7"
+        },
+        {
+          "path": "round2/r2-019.json",
+          "count": 400,
+          "bytes": 373246,
+          "sha256": "6152b6d0f5a4639f04809f33430abc52b53a2e1565c7e2a152ba10060b12da7b"
+        },
+        {
+          "path": "round2/r2-020.json",
+          "count": 400,
+          "bytes": 366456,
+          "sha256": "b83243757c0e9917e003adc5a064f13193638ffe8a453e4279427a01ec0e0e3b"
+        },
+        {
+          "path": "round2/r2-021.json",
+          "count": 400,
+          "bytes": 373233,
+          "sha256": "734774fa6d5aa7a4778dd30284d71c6fcb3b5aa6618edaa7932aa0e108504bd6"
+        },
+        {
+          "path": "round2/r2-022.json",
+          "count": 400,
+          "bytes": 375850,
+          "sha256": "42791f85a9934798c0c2f3b9a71e72ced89240addd63526f2ee78285f7d0efcb"
+        },
+        {
+          "path": "round2/r2-023.json",
+          "count": 400,
+          "bytes": 372927,
+          "sha256": "8c232af1a97cd409d438422fb5ce4ae288eb78b3e0160513837861bc9ffceac8"
+        },
+        {
+          "path": "round2/r2-024.json",
+          "count": 400,
+          "bytes": 370245,
+          "sha256": "80435e44a86e63bf38aac6c5f4d6dce8e4c5991a4caa518ab1d97bed165d3269"
+        },
+        {
+          "path": "round2/r2-025.json",
+          "count": 400,
+          "bytes": 369943,
+          "sha256": "215f23dedc6a33d8e296ff90dc7857c703062a9cfe7e18798015f73e1e689017"
+        },
+        {
+          "path": "round2/r2-026.json",
+          "count": 400,
+          "bytes": 373294,
+          "sha256": "75f63357e29c75da5bfe2f74f776db1ea8df20ddd490f8e1e99f3ee89234b8b5"
+        },
+        {
+          "path": "round2/r2-027.json",
+          "count": 372,
+          "bytes": 344606,
+          "sha256": "a2bf72893413822ec6a041cada16f0e7c45caa71a51519abdb954599b7e58632"
+        }
+      ]
+    },
+    "final": {
+      "kind": "clue-shards",
+      "expectedValue": 3000,
+      "clueCount": 2203,
+      "recordCount": 2203,
+      "shardSize": 400,
+      "shardCount": 6,
+      "bytes": 487877,
+      "shards": [
+        {
+          "path": "final/fj-000.json",
+          "count": 400,
+          "bytes": 87857,
+          "sha256": "361dc019ab5195a114dfbc61829c9dcce86bfbbfe47165b5c754874a60db36c5"
+        },
+        {
+          "path": "final/fj-001.json",
+          "count": 400,
+          "bytes": 89184,
+          "sha256": "a1a5e3b4cfac3f73562115bb337122fb22b9926145389efbccb90431effd3227"
+        },
+        {
+          "path": "final/fj-002.json",
+          "count": 400,
+          "bytes": 88809,
+          "sha256": "e76813f6a4f34c57b3942c2a263c086e95d114398e8bc8c8bff92c2d2387f9ee"
+        },
+        {
+          "path": "final/fj-003.json",
+          "count": 400,
+          "bytes": 88820,
+          "sha256": "f2dab6d7dc6d8508e825615662e5c90c97e8fa8572e91d5987c52e222e8fdbb0"
+        },
+        {
+          "path": "final/fj-004.json",
+          "count": 400,
+          "bytes": 87921,
+          "sha256": "fd87057532b9793270794f38690927f49ee4277b32f4bfb66ea2134e7fc03eb4"
+        },
+        {
+          "path": "final/fj-005.json",
+          "count": 203,
+          "bytes": 45286,
+          "sha256": "e6ae546c53eecdbfda8252d951a65c7edb6d8b2133cf146e68d326615a0389a6"
+        }
+      ]
+    }
+  },
+  "totals": {
+    "regularCategoryCount": 22719,
+    "playableClueCount": 115798,
+    "dataBytes": 21387769
+  }
+}
