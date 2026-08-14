@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07064f">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="A browser-based, randomly generated 61-clue Jeopardy-style practice game.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Jeopardy! Random Game</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <link href="./favicon.ico">
+
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="title-group">
+        <p class="eyebrow">61-clue single-player game</p>
+        <h1>Jeopardy! Random Game</h1>
+      </div>
+
+      <div class="status-bar" aria-label="Current game status">
+        <p><span>Score</span><strong id="score-value">$0</strong></p>
+        <p><span>Correct</span><strong id="correct-count">0</strong></p>
+        <p><span>Wrong</span><strong id="wrong-count">0</strong></p>
+        <p><span>Answered</span><strong id="answered-count">0 / 61</strong></p>
+      </div>
+
+      <div class="header-actions" aria-label="Game controls">
+        <button class="secondary-button" id="help-button" type="button">
+          How to play
+        </button>
+        <button class="secondary-button" id="new-game-button" type="button" disabled>
+          New game
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="system-panel loading-panel" id="loading-panel" aria-labelledby="loading-title">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <p class="round-kicker">Please wait</p>
+        <h2 id="loading-title">Preparing your game</h2>
+        <p id="loading-message" role="status" aria-live="polite">Loading the clue database…</p>
+      </section>
+
+      <section class="system-panel error-panel" id="error-panel" aria-labelledby="error-title" hidden>
+        <p class="round-kicker">Something went wrong</p>
+        <h2 id="error-title">The game could not be prepared</h2>
+        <p id="error-message">The clue files could not be loaded.</p>
+        <details class="error-details">
+          <summary>Technical details</summary>
+          <code id="error-technical-details"></code>
+        </details>
+        <div class="system-actions">
+          <button class="primary-button" id="retry-button" type="button">Try again</button>
+          <button class="secondary-button" id="return-to-game-button" type="button" hidden>Return to saved game</button>
+        </div>
+      </section>
+
+      <section class="round-panel" id="round-panel" aria-labelledby="round-title" hidden>
+        <div class="round-heading">
+          <div>
+            <p class="round-kicker" id="round-kicker">Round 1</p>
+            <h2 id="round-title">Jeopardy! Round</h2>
+          </div>
+          <p class="round-note" id="round-note">Complete all 30 clues to unlock Double Jeopardy!</p>
+        </div>
+
+        <div class="board-help" id="board-help">
+          <span id="board-instruction">Tap any dollar value to open the clue in a large popup.</span>
+          <strong class="round-progress" id="round-progress">0 / 30 clues completed</strong>
+          <small class="data-summary" id="data-summary"></small>
+        </div>
+
+        <div class="board-scroller" id="board-scroller" aria-describedby="board-help">
+          <div class="board" id="game-board" aria-label="Jeopardy! Round game board"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Unofficial, noncommercial fan project for personal use. Not affiliated with or endorsed by Jeopardy Productions, Inc.</span>
+      <span class="app-version">Release 1.0.0</span>
+    </footer>
+  </div>
+
+  <p class="visually-hidden" id="game-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+
+  <dialog class="clue-dialog" id="clue-dialog" aria-labelledby="dialog-category" aria-describedby="dialog-clue">
+    <form method="dialog" class="dialog-close-row">
+      <button class="icon-button" value="close" aria-label="Close clue dialog">×</button>
+    </form>
+
+    <div class="dialog-content">
+      <p class="dialog-category" id="dialog-category"></p>
+      <p class="dialog-value" id="dialog-value"></p>
+      <p class="dialog-clue" id="dialog-clue"></p>
+
+      <div class="response-panel" id="response-panel" role="status" aria-live="polite" aria-atomic="true" hidden>
+        <p class="response-label">Correct response</p>
+        <p class="dialog-response" id="dialog-response"></p>
+      </div>
+
+      <div class="dialog-actions">
+        <button class="primary-button" id="reveal-button" type="button">Reveal response</button>
+        <div class="judgment-actions" id="judgment-actions" hidden>
+          <button class="wrong-button" id="wrong-button" type="button">I was wrong</button>
+          <button class="correct-button" id="correct-button" type="button">I was right</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="help-dialog" id="help-dialog" aria-labelledby="help-title">
+    <form method="dialog" class="dialog-close-row">
+      <button class="icon-button" value="close" aria-label="Close how-to-play dialog">×</button>
+    </form>
+
+    <div class="dialog-content compact-dialog-content help-content">
+      <p class="dialog-kicker">How to play</p>
+      <h2 id="help-title">Complete all 61 clues</h2>
+      <ol class="help-steps">
+        <li>Tap a dollar value to open its clue.</li>
+        <li>Think of your response, then tap <strong>Reveal response</strong>.</li>
+        <li>Use <strong>I was right</strong> or <strong>I was wrong</strong> on the honor system.</li>
+        <li>Correct responses add the clue value; wrong responses subtract it.</li>
+        <li>Finish Round 1, Double Jeopardy!, and Final Jeopardy! to see your results.</li>
+      </ol>
+      <p class="help-note">Your current game is saved automatically in this browser. The New game button discards that progress after asking for confirmation.</p>
+      <button class="primary-button wide-button" id="close-help-button" type="button">Return to the board</button>
+    </div>
+  </dialog>
+
+  <dialog class="confirm-dialog" id="reset-dialog" aria-labelledby="reset-title">
+    <div class="dialog-content compact-dialog-content">
+      <p class="dialog-kicker">Reset game</p>
+      <h2 id="reset-title">Start a new game?</h2>
+      <p>Your current score and progress will be lost. A completely new set of categories and clues will be generated.</p>
+      <div class="confirm-actions">
+        <button class="secondary-button" id="cancel-reset-button" type="button">Cancel</button>
+        <button class="danger-button" id="confirm-reset-button" type="button">Start new game</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="transition-dialog" id="transition-dialog" aria-labelledby="transition-title">
+    <div class="dialog-content compact-dialog-content transition-content">
+      <p class="dialog-kicker" id="transition-kicker">Round complete</p>
+      <h2 id="transition-title">Jeopardy! Round complete</h2>
+      <p id="transition-summary"></p>
+      <button class="primary-button wide-button" id="continue-round-button" type="button">
+        Start Double Jeopardy!
+      </button>
+    </div>
+  </dialog>
+
+  <dialog class="results-dialog" id="results-dialog" aria-labelledby="results-title">
+    <div class="dialog-content results-content">
+      <p class="dialog-kicker">All 61 clues completed</p>
+      <h2 id="results-title">Game complete</h2>
+
+      <div class="results-grid" aria-label="Final game statistics">
+        <p class="result-score"><span>Final score</span><strong id="final-score">$0</strong></p>
+        <p><span>Correct</span><strong id="final-correct">0</strong></p>
+        <p><span>Wrong</span><strong id="final-wrong">0</strong></p>
+        <p><span>Accuracy</span><strong id="final-accuracy">0.0%</strong></p>
+        <p><span>Answered</span><strong id="final-answered">61 / 61</strong></p>
+      </div>
+
+      <button class="primary-button wide-button" id="results-new-game-button" type="button">
+        Play another game
+      </button>
+    </div>
+  </dialog>
+
+  <script type="module" src="./js/app.js?v=1.0.0"></script>
+</body>
+</html>

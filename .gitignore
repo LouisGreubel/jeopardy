@@ -1,0 +1,17 @@
+# Keep the original workbook out of the GitHub repository.
+clues.xlsx
+source/*.xlsx
+source/*.xlsm
+
+# Local conversion reports can contain source rows and are not needed by the site.
+reports/
+
+# Python build files.
+.venv/
+__pycache__/
+*.pyc
+
+# Operating-system and editor files.
+.DS_Store
+Thumbs.db
+.vscode/
