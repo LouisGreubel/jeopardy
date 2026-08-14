@@ -1,0 +1,29 @@
+{
+  "cellOverrides": [
+    {
+      "column": "C",
+      "startRow": 2,
+      "endRow": 6,
+      "value": "2.0",
+      "reason": "Excel converted the original text category 2.0 to the number 2."
+    },
+    {
+      "column": "E",
+      "startRow": 32648,
+      "value": "9-1-1",
+      "reason": "Excel converted the television title 9-1-1 into a date ending in 2001."
+    },
+    {
+      "column": "E",
+      "startRow": 33731,
+      "value": "3-1-1",
+      "reason": "Excel converted the TSA rule 3-1-1 into a date ending in 2001."
+    },
+    {
+      "column": "E",
+      "startRow": 112976,
+      "value": "9-1-1",
+      "reason": "Excel converted the television title 9-1-1 into a date ending in 2001."
+    }
+  ]
+}
